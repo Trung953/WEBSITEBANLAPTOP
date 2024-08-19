@@ -1,0 +1,32 @@
+﻿@model WebLT.Models.TAIKHOAN
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_loginAdmin.cshtml";
+}
+
+@using (Html.BeginForm("Index", "ADMINLOGIN", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="log-input">
+        @*<h4>Tài khoản</h4>*@
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="log-input">
+            <div class="user">
+                @Html.EditorFor(model => model.username)
+                @Html.ValidationMessageFor(model => model.username)
+            </div>
+        </div>
+
+        <div class="log-input">
+            <div class="lock">
+                @Html.PasswordFor(model => model.password)
+                @Html.ValidationMessageFor(model => model.password)
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <input type="submit" value="ĐĂNG NHẬP" />
+    </div>
+}
+

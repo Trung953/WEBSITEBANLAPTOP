@@ -1,0 +1,11 @@
+﻿@model IEnumerable<WebLT.Models.DANHMUC>
+<div class="categories">
+    <ul>
+        <h3 class="text-center">HÃNG SẢN XUẤT</h3>
+        @foreach (var p in Model)
+        {
+            <li><a href="~/SanPham/FilterSPofDM/?id=@p.ID_DM">@p.tendanhmuc</a></li>
+        }
+    </ul>
+</div>
+

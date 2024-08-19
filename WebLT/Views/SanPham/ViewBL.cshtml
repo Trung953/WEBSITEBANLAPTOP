@@ -1,0 +1,15 @@
+﻿@model List<WebLT.Models.BINHLUAN>
+
+
+<div class="product-desc">
+    @foreach (var a in Model)
+    {
+        <p>✧ @a.TAIKHOAN.username:  @a.noidung - ngày @a.ngaybinhluan.ToShortDateString()</p><br />
+    }
+</div>
+
+<style>
+    h4 {
+        color: grey;
+    }
+</style>

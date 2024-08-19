@@ -1,0 +1,15 @@
+﻿@model List<WebLT.Models.TINTUC>
+
+
+<li>
+    <a href="#">TIN TỨC   <img src="/Content/images/ads-hot.gif" width="35" height="12" /></a>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="#">@item.NHOMTIN.tennhomtin</a>
+            </li>
+        }
+    </ul>
+</li>
+
